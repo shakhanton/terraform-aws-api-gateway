@@ -11,11 +11,11 @@ variable "repository" {
   default     = ""
   description = "Terraform current module repo"
 
-  validation {
-    # regex(...) fails if it cannot find a match
-    condition     = can(regex("^https://", var.repository))
-    error_message = "The module-repo value must be a valid Git repo link."
-  }
+#   validation {
+#     # regex(...) fails if it cannot find a match
+#     condition     = can(regex("^https://", var.repository))
+#     error_message = "The module-repo value must be a valid Git repo link."
+#   }
 
 }
 
